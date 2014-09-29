@@ -23,7 +23,7 @@
 // for being as bad as Linux.  Can a brother get a standards update around 
 // here? Until then.. 
 
-#if defined(__linux__) 
+#if defined(__linux__) && !defined(ANDROID)
 #  include <endian.h>
 #  define htonll htobe64
 #  define ntohll be64toh
